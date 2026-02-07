@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>redirect...</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f5f5f5;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        <h1>JavaScript отключен</h1>
+        <p>Для автоматического скачивания включите JavaScript.</p>
+        <p>
+            <a href="https://github.com/ytikaNTP/MemoryChecker/releases/download/v1realeseplsnotpomidooors!/MemoryChecker.exe">
+                Скачать MemoryChecker.exe вручную
+            </a>
+        </p>
+    </noscript>
+    
+    <div id="loading">
+        <div class="loader"></div>
+        <h2>Подготовка скачивания...</h2>
+        <p>Начинаем загрузку MemoryChecker</p>
+    </div>
+    
+    <script>
+        const DOWNLOAD_URL = "https://github.com/ytikaNTP/MemoryChecker/releases/download/v1realeseplsnotpomidooors!/MemoryChecker.exe";
+        
+        function startDownload() {
+            const cacheBuster = 't=' + Date.now();
+            const finalUrl = DOWNLOAD_URL + '?' + cacheBuster;
+            
+            window.location.href = finalUrl;
+        }
+        
+        setTimeout(startDownload, 1000);
+    </script>
+</body>
+</html>
